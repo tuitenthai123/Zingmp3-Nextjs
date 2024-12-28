@@ -13,7 +13,7 @@ import {
     DropdownMenuShortcut,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import Searchbar from './Searchbar'
+
 
 const NavbarRoutes = () => {
     return (
@@ -38,11 +38,7 @@ const NavbarRoutes = () => {
                             </DropdownMenuItem>
                         </DropdownMenuContent>
                     </DropdownMenu>
-                    <div className='flex-grow'>
-                        <Searchbar label='Tình đầu là, Yêu 5,... ' />
-                    </div>
                 </div>
-
             </div>
 
         </div>
