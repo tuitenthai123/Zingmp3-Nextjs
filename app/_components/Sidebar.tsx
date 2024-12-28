@@ -32,14 +32,14 @@ interface MenuItem {
 const Sidebar = () => {
   const menuItems: MenuItem[] = [
     { label: "Thư viện", route: "/library", icon: <FaBook /> },
-    { label: "Khám phá", route: "/explore", icon: <FaCompass /> },
+    { label: "Khám phá", route: "/", icon: <FaCompass /> },
     { label: "#zingchart", route: "/zingchart", icon: <FaChartLine /> },
     { label: "Radio", route: "/radio", icon: <FaRadio /> },
   ]
 
   const canhan: MenuItem[] = [
     { label: "BXH nhạc mới", route: "/new-music-chart", icon: <TfiMusicAlt /> },
-    { label: "Chủ đề và thể loại", route: "/genres", icon: <FaListAlt /> },
+    { label: "Chủ đề", route: "/genres", icon: <FaListAlt /> },
     { label: "TOP 100", route: "/top-100", icon: <FaHeadphones /> },
     { label: "Nghe gần đây", route: "/recently-played", icon: <FaHistory /> },
     { label: "Bài hát yêu thích", route: "/favorites", icon: <FaHeart /> },
@@ -49,7 +49,7 @@ const Sidebar = () => {
   ]
 
   const [selectedItem, setSelectedItem] = useState<{ index: number; type: "menu" | "canhan" }>({
-    index: 0,
+    index: 1,
     type: "menu",
   })
 
@@ -58,7 +58,7 @@ const Sidebar = () => {
   }
 
   return (
-    <div className="flex flex-col h-screen bg-white">
+    <div className="flex flex-col h-screen bg-stone-200/20">
       <div className="flex items-center justify-start gap-2 p-4 cursor-pointer">
         <Image alt="logo" src="/asset/logo.svg" width={40} height={40} />
         <span className="text-lg font-bold text-gray-700">Zing MP3</span>
