@@ -17,23 +17,23 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="flex flex-col md:flex-row min-h-screen">
-          <aside className="w-2/12 md:w-64 bg-stone-200/65 md:min-h-screen">
-            <div className="hidden md:flex h-full flex-col inset-y-0 z-50">
-              <Sidebar />
-            </div>
+        <div className="flex h-screen">
+          <aside className="w-64 flex-shrink-0 hidden md:block">
+            <Sidebar />
           </aside>
-          <div className="w-10/12">
-            <div className="w-full">
+          <main className="flex-1 flex flex-col h-full">
+            <div className="h-[64px] flex-shrink-0">
               <Navbar />
             </div>
-            <main className="flex- p-4">
-              {children}
-            </main>
-          </div>
-
+            <div className="flex-1 overflow-y-auto w-full">
+              <div className="w-full p-4">
+                {children}
+              </div>
+            </div>
+          </main>
         </div>
       </body>
     </html>
   );
 }
+
